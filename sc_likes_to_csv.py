@@ -7,7 +7,7 @@ from selenium import webdriver
 def scrape_my_like():
     """Enregistre la page html"""
     url = "https://www.soundcloud.com/Z0ul0u25/likes"
-    nav = webdriver.Firefox(executable_path=r"D:\Geckodriver\geckodriver.exe")
+    nav = webdriver.Firefox(executable_path=r"geckodriver.exe")
     nav.get(url)
     time.sleep(2)  # Donne 2 sec pour ouvrir le nav
     scroll_pause_time = 1 # Pause entre les scroll
@@ -94,7 +94,7 @@ def html_to_csv():
 if __name__ == "__main__":
     debut = time.time()
     print("Scrape l'HTML du navigateur Firefox...")
-    #scrape_my_like()
+    scrape_my_like()
     fin = time.time()
     total = fin - debut
     print(f"Temps prit pour scrapper: {math.floor(total/60)}:{total%60}")
