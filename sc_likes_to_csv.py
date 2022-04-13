@@ -85,7 +85,7 @@ def html_to_csv():
 
     with open('SoundCloudLikesReformed.csv', 'w', encoding="utf-8") as file:
         #En-tête du CSV
-        file.write("ID;Titre;Artiste;Genre;Restraint")
+        file.write("ID;Artiste;Titre;Genre;Restraint")
         #Juste un compteur pour finir la job
         print(str(data.count("\n")-2)+" titres")
         #Écriture finale au fichier
